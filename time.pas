@@ -6,5 +6,12 @@
   var fl := false;
   if (not(year.Divs(100)) or year.Divs(400)) and year.Divs(4) then fl := true;
   
-  Print($'Этот год високосный? -> {fl}');
+  Println($'Этот год високосный? -> {fl}');
+  
+  var days : integer;
+  
+  if fl then days := 366
+  else days := 365;
+  
+  Print($'Количество дней в {year} -> {days}');
 end.
